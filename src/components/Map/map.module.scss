@@ -1,0 +1,56 @@
+@import '../../scss/variables';
+
+.map {
+    background: url('./map.png') no-repeat center center;
+    background-size: cover;
+
+    &_block {
+        padding: 300px 0px 378px;
+
+        @media (max-width: 1420px) {
+            padding: 140px 0px 330px;
+        }
+
+        @media (max-width: 762px) {
+            padding: 160px 0px 330px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 3.125rem;
+            font-weight: 700;
+            line-height: 60px;
+            margin-bottom: 60px;
+            width: 800px;
+
+            @media (max-width: 1420px) {
+                width: 670px;
+                margin-bottom: 40px;
+            }
+
+            @media (max-width: 762px) {
+                font-size: 2.5rem;
+                line-height: 47.21px;
+                width: 320px;
+                margin-bottom: 50px;
+            }
+        }
+
+        p {
+            font-size: 1.25rem;
+            line-height: 30px;
+            width: 540px;
+
+            @media (max-width: 1420px) {
+                font-size: 1.125rem;
+                line-height: 26px;
+            }
+
+            @media (max-width: 762px) {
+                font-size: 1rem;
+                line-height: 24px;
+                width: 320px;
+            }
+        }
+    }
+}

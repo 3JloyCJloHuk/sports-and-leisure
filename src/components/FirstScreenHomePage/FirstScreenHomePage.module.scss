@@ -1,0 +1,118 @@
+@import '../../scss/variables';
+
+.firstscreen {
+    background: url('./tingerhead.png') no-repeat center center;
+    background-size: cover;
+
+    @media (max-width: 1420px) {
+        background: url('./tingerhead.png') no-repeat center right;
+    }
+
+    @media (max-width: 762px) {
+        background: url('./tingerhead.png') no-repeat 85% top;
+    }
+
+    &_block {
+        padding: 100px 0px 130px;
+        width: 740px;
+        text-align: center;
+
+        @media (max-width: 1420px) {
+            width: 720px;
+            padding: 40px 0px;
+        }
+
+        @media (max-width: 762px) {
+            width: 320px;
+            padding: 60px 0px;
+        }
+
+        >p {
+            font-weight: 300;
+            font-style: italic;
+            font-size: 1.25rem;
+        }
+
+        h4 {
+            font-weight: 700;
+            font-style: italic;
+            font-size: 3.75rem;
+            line-height: 120px;
+            margin: 0px 0px -40px;
+
+            @media (max-width: 1420px) {
+                margin: 0px 0px -75px;
+                font-size: 1.5rem;
+            }
+
+            @media (max-width: 762px) {
+                margin: 0px 0px -30px;
+            }
+        }
+
+        h1 {
+            margin: 0px;
+            font-weight: 700;
+            font-style: italic;
+            font-size: 7.5rem;
+            line-height: 120px;
+
+            @media (max-width: 1420px) {
+                font-size: 6.25rem;
+            }
+
+            @media (max-width: 762px) {
+                line-height: 90px;
+            }
+        }
+
+        button {
+            width: 324px;
+            background-color: #CD2A22;
+            color: $white;
+            padding: 30.8px;
+            border: none;
+            border-radius: 10px;
+            margin: 60px auto;
+            transition: background-color $duration ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #99251f;
+            }
+
+            @media (max-width: 1420px) {
+                margin: 200px auto 30px;
+            }
+        }
+
+        >div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @media (max-width: 762px) {
+                display: none;
+            }
+
+            >div {
+                background-color: rgba(255, 255, 255, 0.2);
+                border-radius: 10px;
+                border: 1px solid $white;
+                width: 230px;
+                padding: 35px 20px 40px;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                p {
+                    font-weight: 500;
+                    color: $white;
+                    line-height: 18.88px;
+                }
+            }
+        }
+    }
+}

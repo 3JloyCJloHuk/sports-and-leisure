@@ -1,0 +1,76 @@
+@import '../../scss/variables';
+
+.help {
+    background-color: rgb(28, 26, 26);
+
+    &_block {
+        padding: 140px 0px 160px;
+        background: url('./lines.png') no-repeat center center;
+        background-size: cover;
+
+        @media (max-width: 762px) {
+            padding: 100px 0px;
+        }
+
+        h2,
+        p,
+        button {
+            color: $white;
+            text-align: center;
+            margin: 0px auto;
+        }
+
+        h2 {
+            width: 570px;
+            font-size: 3.125rem;
+            font-weight: 700;
+            line-height: 59.01px;
+
+            @media (max-width: 762px) {
+                width: 320px;
+                font-size: 2.5rem;
+            }
+        }
+
+        p {
+            font-size: 1.25rem;
+            line-height: 28px;
+            margin: 30px auto 80px;
+
+            @media (max-width: 762px) {
+                width: 320px;
+                margin: 30px auto 60px;
+                font-size: 1rem;
+            }
+        }
+
+        button {
+            display: block;
+            width: 324px;
+            background-color: #1A4AA1;
+            border: none;
+            border-radius: 10px;
+            font-weight: 500;
+            padding: 30.8px 0px;
+            transition: background-color $duration ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #3a71d4;
+            }
+
+            @media (max-width: 1420px) {
+                width: 340px;
+            }
+
+            @media (max-width: 762px) {
+                width: 320px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1420px) {}
+
+@media (max-width: 762px) {}

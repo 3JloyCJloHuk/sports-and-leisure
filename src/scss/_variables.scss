@@ -1,0 +1,44 @@
+$black: #1C1A1A;
+$white: #ffffff;
+$address: #86898D;
+$duration: .3s;
+$mail: #FA3A30;
+$backgroundModel: #F5F6F6;
+$green: #21873D;
+$blue: #2964DA;
+$red: #C02F29;
+
+.container {
+    width: 1386px;
+    margin: 0px auto;
+}
+
+@media (max-width: 1420px) {
+    .container {
+        width: 720px;
+    }
+}
+
+@media (max-width: 762px) {
+    .container {
+        width: 320px;
+    }
+}
+
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: block;
+}
+
+@media (max-width: 762px) {
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+}

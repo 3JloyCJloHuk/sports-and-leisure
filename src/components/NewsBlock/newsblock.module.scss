@@ -1,0 +1,128 @@
+@import '../../scss/variables';
+
+.news {
+    padding: 120px 0px 100px;
+
+    h2 {
+        font-size: 3.125rem;
+        text-align: center;
+        line-height: 120px;
+        font-weight: 700;
+    }
+
+    &_block {
+        display: grid;
+        grid-template-columns: repeat(3, 442px);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        justify-content: center;
+
+        @media (max-width: 1420px) {
+            grid-template-columns: repeat(2, 349px);
+            grid-column-gap: 20px;
+        }
+
+        @media (max-width: 762px) {
+            grid-template-columns: repeat(1, 320px);
+        }
+
+
+        &_item {
+            border-radius: 10px;
+            border: 1px solid #ECECEC;
+
+            &_photo {
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 280px;
+                    border-radius: 10px 10px 0px 0px;
+
+                    @media (max-width: 1420px) {
+                        height: 222px;
+                    }
+
+                    @media (max-width: 762px) {
+                        height: 200px;
+                    }
+
+                }
+
+                p {
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    color: $white;
+                    font-size: 0.75rem;
+                }
+
+                &_blue {
+                    background-color: $blue;
+                }
+
+                &_red {
+                    background-color: $red;
+                }
+
+                &_green {
+                    background-color: $green;
+                }
+            }
+
+            h3 {
+                font-size: 1.125rem;
+                font-weight: 700;
+                line-height: 21.24px;
+                margin: 40px 40px 30px;
+
+                @media (max-width: 762px) {
+                    margin: 30px;
+                }
+
+            }
+
+            &_date {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px 40px 40px;
+
+                p {
+                    color: #86898D;
+                    font-size: 0.875rem;
+
+                    &:last-of-type {
+                        cursor: pointer;
+                        transition: color $duration ease;
+
+                        &:hover {
+                            color: $mail;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &_more {
+        margin-top: 50px;
+        text-align: center;
+        font-weight: 500;
+        color: $mail;
+        transition: color $duration ease;
+        text-decoration: underline dotted;
+        cursor: pointer;
+
+        &:hover {
+            color: $red;
+        }
+    }
+}
+
+
+@media (max-width: 1420px) {}
+
+@media (max-width: 762px) {}

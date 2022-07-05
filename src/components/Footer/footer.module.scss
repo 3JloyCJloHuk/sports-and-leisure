@@ -1,0 +1,77 @@
+@import '../../scss/variables';
+
+.footer {
+    background-color: $black;
+    color: $white;
+    padding: 60px 0px 60px;
+
+    @media (max-width: 762px) {
+        text-align: center;
+    }
+
+    &_block {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 762px) {
+            display: block;
+        }
+
+        &_address {
+            p {
+                color: $address;
+                font-size: 0.875rem;
+                line-height: 16.52px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &_menu {
+            li {
+                margin-bottom: 25px;
+
+                @media (max-width: 762px) {
+                    margin-bottom: 20px;
+                }
+
+                a {
+                    color: $white;
+                    font-size: 1rem;
+                    line-height: 18.88px;
+                    transition: all $duration ease;
+
+                    &:hover {
+                        color: $address;
+                    }
+                }
+            }
+        }
+
+        &_phone {
+            @media (max-width: 762px) {
+                margin: 60px auto 80px;
+            }
+
+            p {
+                color: $white;
+                font-size: 0.875rem;
+                line-height: 16.52px;
+                margin-bottom: 20px;
+            }
+
+            a {
+                display: block;
+                text-align: end;
+                margin-top: 15px;
+                color: $mail;
+                font-size: 0.875rem;
+                text-decoration: underline dotted;
+                transition: color $duration ease;
+
+                &:hover {
+                    color: #d85851;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+@import '../../scss/variables';
+
+.modelRow {
+    text-align: center;
+    padding: 140px 0px 0px;
+
+    h2 {
+        font-size: 3.125rem;
+        font-weight: 700;
+        color: $black;
+
+        @media (max-width: 762px) {
+            font-size: 2.5rem;
+        }
+    }
+
+    p {
+        font-size: 1.25rem;
+        color: $black;
+        line-height: 28px;
+        width: 730px;
+        margin: 30px auto 100px;
+
+        @media (max-width: 1420px) {
+            font-size: 1.125rem;
+            line-height: 26px;
+            margin: 30px auto 60px;
+        }
+
+        @media (max-width: 762px) {
+            font-size: 1rem;
+            margin: 30px auto 40px;
+            width: 319px;
+        }
+    }
+
+    &_block {
+        display: grid;
+        grid-template-columns: repeat(3, 442px);
+        grid-template-rows: 1fr;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        justify-content: center;
+
+        @media (max-width: 1420px) {
+            grid-template-columns: repeat(3, 225px);
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+        }
+
+        @media (max-width: 762px) {
+            grid-template-columns: repeat(1, 320px);
+            grid-row-gap: 30px;
+        }
+
+        &_item {
+            border: 1px solid #ECECEC;
+            border-radius: 11px;
+            cursor: pointer;
+
+            &_photo {
+                padding: 45px 0px 60px;
+                width: 100%;
+                background-color: $backgroundModel;
+                border-radius: 10px 10px 0px 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media (max-width: 1420px) {
+                    padding: 25px 0px 30px;
+                }
+
+                img {
+                    width: 320px;
+                    height: 175px;
+
+                    @media (max-width: 1420px) {
+                        width: 163.83px;
+                        height: 94.44px;
+                    }
+
+                    @media (max-width: 762px) {
+                        width: 231.67px;
+                        height: 133.55px;
+                    }
+                }
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                line-height: 28.32px;
+                margin: 30px auto 40px;
+                color: $black;
+
+                @media (max-width: 1420px) {
+                    font-size: 1.25rem;
+                }
+
+                @media (max-width: 762px) {
+                    font-size: 1.5rem;
+                    margin: 20px auto 30px;
+                }
+            }
+        }
+    }
+}

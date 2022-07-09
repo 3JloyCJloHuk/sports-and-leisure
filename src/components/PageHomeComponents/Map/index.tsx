@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './map.module.scss';
-import '../../scss/_variables.scss';
+import '../../../scss/_variables.scss';
 
-const Map: React.FC = () => {
+export const Map: React.FC = () => {
   return (
     <div className={styles.map}>
       <div className={styles.map_block + ' container'}>
@@ -15,5 +15,3 @@ const Map: React.FC = () => {
     </div>
   );
 };
-
-export default Map;

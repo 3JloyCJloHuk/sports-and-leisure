@@ -1,8 +1,13 @@
 import React from 'react';
 import styles from './FirstScreenHomePage.module.scss';
-import '../../scss/_variables.scss';
+import '../../../scss/_variables.scss';
+import PopUpBlock from '../../PopUpBlock';
 
-const FirstScreenHomePage: React.FC = () => {
+type FirstScreenHomePageProps = {
+  setPopUp: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export const FirstScreenHomePage: React.FC<FirstScreenHomePageProps> = ({ setPopUp }) => {
   return (
     <div className={styles.firstscreen}>
       <div className="container">
@@ -10,7 +15,7 @@ const FirstScreenHomePage: React.FC = () => {
           <p>Заменит 5 моделей спецтехники</p>
           <h4>универсальный вездеход</h4>
           <h1>Tinger Armor</h1>
-          <button>Узнать подробнее</button>
+          <button onClick={() => setPopUp(true)}>Узнать подробнее</button>
           <div className={styles.firstscreen_block_info}>
             <div>
               <img src="./img/icon1.png" alt="frame" />
@@ -30,5 +35,3 @@ const FirstScreenHomePage: React.FC = () => {
     </div>
   );
 };
-
-export default FirstScreenHomePage;

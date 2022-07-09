@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './partnersblock.module.scss';
-import '../../scss/_variables.scss';
+import '../../../scss/_variables.scss';
 
 const partners = [
   { url: './img/роснефть.png', alt: 'роснефть' },
@@ -10,7 +10,7 @@ const partners = [
   { url: './img/сибур.png', alt: 'сибур' },
 ];
 
-const PartnersBlock: React.FC = () => {
+export const PartnersBlock: React.FC = () => {
   return (
     <div className={styles.partners + ' container'}>
       <div className={styles.partners_block}>
@@ -24,5 +24,3 @@ const PartnersBlock: React.FC = () => {
     </div>
   );
 };
-
-export default PartnersBlock;

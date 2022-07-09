@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './modelrow.module.scss';
-import '../../scss/_variables.scss';
+import '../../../scss/_variables.scss';
 
 const modelRow = [
   { url: './img/argo.png', title: 'Вездеходы Argo' },
@@ -8,7 +8,7 @@ const modelRow = [
   { url: './img/pelets.png', title: 'Вездеходы Пелец' },
 ];
 
-const ModelRow: React.FC = () => {
+export const ModelRow: React.FC = () => {
   return (
     <div className={styles.modelRow + ' container'}>
       <h2>Модельный ряд</h2>
@@ -29,5 +29,3 @@ const ModelRow: React.FC = () => {
     </div>
   );
 };
-
-export default ModelRow;

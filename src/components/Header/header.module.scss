@@ -1,0 +1,175 @@
+@import '../../scss/variables';
+
+.header {
+
+    &_background {
+        display: none;
+        position: absolute;
+        width: 101%;
+        height: 101%;
+        background-color: rgba(28, 26, 26, .8);
+        cursor: pointer;
+    }
+
+    @media (max-width: 1420px) {
+        &_background_checked {
+            display: block;
+        }
+    }
+
+    &_block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+
+
+        &_logo {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &.tablet {
+                display: none;
+
+                @media (max-width: 1420px) {
+                    margin-top: 20px;
+                    display: flex;
+                }
+            }
+
+            img {
+                width: 38px;
+                height: 45px;
+            }
+
+            >div {
+                width: 170px;
+                margin-left: 15px;
+
+                h4 {
+                    font-size: 1.25rem;
+                    font-weight: 800;
+                    line-height: 23.6px;
+                }
+
+                p {
+                    color: $address;
+                    font-size: .75rem;
+                    line-height: 13px;
+                }
+            }
+        }
+
+        &_menu {
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            @media (max-width: 1420px) {
+                height: 100vh;
+                width: 100%;
+                flex-direction: column;
+                width: 90%;
+                z-index: 10;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                transform: translate(-150%);
+                opacity: 0;
+                transition: transform $duration ease-in-out;
+                background-color: $white;
+
+                &_checked {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            &_lines {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+
+                &_line {
+                    &:first-of-type {
+                        transform-origin: 0% 0%;
+                        transform: rotate(45deg);
+                    }
+
+                    &:last-of-type {
+                        transform-origin: 0% 100%;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+
+            li {
+                a {
+                    transition: all $duration ease;
+
+                    &:hover,
+                    &.active {
+                        color: $blue;
+                        border-bottom: 1px solid $blue;
+                    }
+                }
+            }
+
+            li:not(:last-of-type) {
+                margin-right: 75px;
+
+                @media (max-width: 1420px) {
+                    margin-right: 0px;
+                }
+            }
+
+            @media (max-width: 1420px) {
+                li {
+                    margin-top: 40px;
+
+                    a {
+                        font-size: 1.25rem;
+                        line-height: 23.6px;
+                    }
+                }
+            }
+
+        }
+
+        &_lines,
+        &_menu_lines {
+            display: none;
+            height: 18px;
+            width: 24px;
+            z-index: 2;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: background-color $duration ease;
+            cursor: pointer;
+
+            &:hover {
+
+                .header_block_lines_line,
+                .header_block_menu_lines_line {
+                    background-color: $blue;
+                }
+            }
+
+            @media (max-width: 1420px) {
+                display: flex;
+            }
+
+            &_line {
+                display: block;
+                height: 1px;
+                width: 100%;
+                background-color: $black;
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: 1420px) {}

@@ -4,8 +4,6 @@ import styles from './footer.module.scss';
 import '../../scss/_variables.scss';
 
 const Footer: React.FC = () => {
-  const innerWidth = window.innerWidth;
-
   return (
     <footer className={styles.footer}>
       <div className={styles.footer_block + ' container'}>
@@ -19,29 +17,29 @@ const Footer: React.FC = () => {
         </div>
         <ul className={styles.footer_block_menu}>
           <li>
-            <NavLink to="">Модельный ряд</NavLink>
+            <NavLink to="/">Главная</NavLink>
           </li>
           <li>
-            <NavLink to="">Сервис и Ремонт</NavLink>
+            <NavLink to="/service">Сервис и Ремонт</NavLink>
           </li>
           <li>
-            <NavLink to="">Запчасти</NavLink>
+            <NavLink to="/spares">Запчасти</NavLink>
           </li>
         </ul>
         <ul className={styles.footer_block_menu}>
           <li>
-            <NavLink to="">Доставка и Оплата</NavLink>
+            <NavLink to="/shipping">Доставка и Оплата</NavLink>
           </li>
           <li>
-            <NavLink to="">О компании</NavLink>
+            <NavLink to="/company">О компании</NavLink>
           </li>
           <li>
-            <NavLink to="">Контакты</NavLink>
+            <NavLink to="/contacts">Контакты</NavLink>
           </li>
         </ul>
         <div className={styles.footer_block_phone}>
-          <p>+7 (812) 322-60-60</p>
-          <p>+7 (921) 326-60-26</p>
+          <a href="tel:+78123226060">+7 (812) 322-60-60</a>
+          <a href="tel:+79213266026">+7 (921) 326-60-26</a>
           <a href="mailto:info@vezdehod.com">Связаться с нами</a>
         </div>
 

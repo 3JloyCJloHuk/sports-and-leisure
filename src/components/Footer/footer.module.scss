@@ -52,24 +52,29 @@
                 margin: 60px auto 80px;
             }
 
-            p {
+            a {
+                display: block;
                 color: $white;
                 font-size: 0.875rem;
                 line-height: 16.52px;
                 margin-bottom: 20px;
-            }
 
-            a {
-                display: block;
-                text-align: end;
-                margin-top: 15px;
-                color: $mail;
-                font-size: 0.875rem;
-                text-decoration: underline dotted;
-                transition: color $duration ease;
+                &:nth-of-type(3) {
+                    display: block;
+                    text-align: end;
+                    margin-top: 15px;
+                    color: $mail;
+                    font-size: 0.875rem;
+                    text-decoration: underline dotted;
+                    transition: color $duration ease;
 
-                &:hover {
-                    color: #d85851;
+                    @media (max-width: 762px) {
+                        text-align: center;
+                    }
+
+                    &:hover {
+                        color: #d85851;
+                    }
                 }
             }
         }

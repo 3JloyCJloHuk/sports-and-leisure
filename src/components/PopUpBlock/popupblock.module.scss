@@ -14,7 +14,7 @@
 
     &_form {
         width: 680px;
-        position: relative;
+        position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -68,35 +68,39 @@
             }
         }
 
-        &_input {
+        &_inputs {
             display: flex;
             align-items: center;
             flex-direction: column;
 
-            input,
-            textarea {
-                width: 384px;
-                border-radius: 10px;
-                padding: 23.8px;
-                border: none;
-                margin-bottom: 20px;
-                background-color: $backgroundModel;
-                resize: none;
 
-                &:placeholder:before {
-                    content: 'asd';
+            &_input {
+                position: relative;
+
+                input,
+                textarea {
+                    width: 384px;
+                    border-radius: 10px;
+                    padding: 23.8px;
+                    border: none;
+                    margin-bottom: 30px;
+                    background-color: $backgroundModel;
+                    resize: none;
+                }
+
+
+                &_error {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 5px;
+                    color: $mail
                 }
             }
 
             button {
+                @include button;
                 width: 384px;
-                background-color: $mail;
                 padding: 30.8px;
-                border: none;
-                border-radius: 10px;
-                color: $white;
-                font-weight: 500;
-
             }
         }
     }

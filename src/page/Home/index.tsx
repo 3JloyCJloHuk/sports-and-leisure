@@ -25,6 +25,7 @@ const Home: React.FC = () => {
 
   const onClickAddPage = () => {
     dispatch(setPage());
+    console.log(setPage());
   };
 
   if (popUp) {

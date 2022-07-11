@@ -43,3 +43,19 @@ $red: #C02F29;
         display: none;
     }
 }
+
+
+@mixin button {
+    background-color: $mail;
+    border: none;
+    border-radius: 10px;
+    color: $white;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color $duration ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $blue;
+    }
+}

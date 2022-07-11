@@ -1,6 +1,7 @@
 import React from 'react';
 import { ErrorMessage, Field, Formik } from 'formik';
 import styles from './popupblock.module.scss';
+import validation from './validation';
 
 type PopUpBlockProps = {
   setPopUp: React.Dispatch<React.SetStateAction<boolean>>;
@@ -22,17 +23,45 @@ const PopUpBlock: React.FC<PopUpBlockProps> = ({ setPopUp }) => {
             phone: '',
             message: '',
           }}
+          validationSchema={validation}
           onSubmit={(values) => {
-            alert('Ваш заказ оформлен');
+            alert('Console');
             console.log({ values });
           }}>
           {({ handleSubmit }) => (
-            <form onSubmit={handleSubmit} className={styles.popup_form_input}>
-              <ErrorMessage component="p" name="name" />
-              <Field type="text" name="name" placeholder="Контактное лицо" />
-              <Field type="text" name="mail" placeholder="Электронная почта" />
-              <Field type="text" name="phone" placeholder="Контактный телефон" />
-              <Field as="textarea" name="message" placeholder="Комментарий" />
+            <form onSubmit={handleSubmit} className={styles.popup_form_inputs}>
+              <div className={styles.popup_form_inputs_input}>
+                <Field type="text" name="name" placeholder="Контактное лицо" />
+                <ErrorMessage
+                  className={styles.popup_form_inputs_input_error}
+                  component="p"
+                  name={'name'}
+                />
+              </div>
+              <div className={styles.popup_form_inputs_input}>
+                <Field type="text" name="mail" placeholder="Электронная почта" />
+                <ErrorMessage
+                  className={styles.popup_form_inputs_input_error}
+                  component="p"
+                  name={'mail'}
+                />
+              </div>
+              <div className={styles.popup_form_inputs_input}>
+                <Field type="text" name="phone" placeholder="Контактный телефон" />
+                <ErrorMessage
+                  className={styles.popup_form_inputs_input_error}
+                  component="p"
+                  name={'phone'}
+                />
+              </div>
+              <div className={styles.popup_form_inputs_input}>
+                <Field as="textarea" name="message" placeholder="Комментарий" />
+                <ErrorMessage
+                  className={styles.popup_form_inputs_input_error}
+                  component="p"
+                  name={'message'}
+                />
+              </div>
               <button type="submit">Узнать подробнее</button>
             </form>
           )}

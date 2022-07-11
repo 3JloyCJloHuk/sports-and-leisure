@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import styles from './header.module.scss';
 
 const menu = [
@@ -13,7 +13,6 @@ const menu = [
 
 const Header: React.FC = () => {
   const location = useLocation();
-  const navigate = useNavigate();
 
   const [checked, setChecked] = React.useState(false);
   const [menuActive, setMenuActive] = React.useState<String>(location.pathname);
@@ -34,13 +33,15 @@ const Header: React.FC = () => {
         }
         onClick={() => setChecked(false)}></div>
       <div className={styles.header_block + ' container'}>
-        <div className={styles.header_block_logo} onClick={() => navigate('/')}>
-          <img src="./img/logo.png" alt="logo" />
-          <div>
-            <h4>Спорт и Отдых </h4>
-            <p>продажа и обслуживание вездеходной техники</p>
+        <a href="/">
+          <div className={styles.header_block_logo}>
+            <img src="./img/logo.png" alt="logo" />
+            <div>
+              <h4>Спорт и Отдых </h4>
+              <p>продажа и обслуживание вездеходной техники</p>
+            </div>
           </div>
-        </div>
+        </a>
         <ul
           className={
             checked
@@ -51,17 +52,18 @@ const Header: React.FC = () => {
             <span className={styles.header_block_menu_lines_line}></span>
             <span className={styles.header_block_menu_lines_line}></span>
           </div>
-          <div
-            className={styles.header_block_logo + ' ' + styles.tablet}
-            onClick={() => {
-              navigate('/');
-              setChecked(false);
-            }}>
-            <img src="./img/logo.png" alt="logo" />
-            <div>
-              <h4>Спорт и Отдых </h4>
+          <a href="/">
+            <div
+              className={styles.header_block_logo + ' ' + styles.tablet}
+              onClick={() => {
+                setChecked(false);
+              }}>
+              <img src="./img/logo.png" alt="logo" />
+              <div>
+                <h4>Спорт и Отдых </h4>
+              </div>
             </div>
-          </div>
+          </a>
           {menu.map((obj, i) => (
             <li key={i}>
               <NavLink

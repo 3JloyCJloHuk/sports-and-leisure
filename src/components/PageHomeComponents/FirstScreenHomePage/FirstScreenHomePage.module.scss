@@ -67,19 +67,10 @@
         }
 
         button {
+            @include button;
             width: 324px;
-            background-color: #CD2A22;
-            color: $white;
             padding: 30.8px;
-            border: none;
-            border-radius: 10px;
             margin: 60px auto;
-            transition: background-color $duration ease;
-            cursor: pointer;
-
-            &:hover {
-                background-color: #99251f;
-            }
 
             @media (max-width: 1420px) {
                 margin: 200px auto 30px;

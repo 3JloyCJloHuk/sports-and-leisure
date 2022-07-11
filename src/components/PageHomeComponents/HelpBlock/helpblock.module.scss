@@ -45,15 +45,11 @@
         }
 
         button {
+            @include button;
             display: block;
             width: 324px;
             background-color: #1A4AA1;
-            border: none;
-            border-radius: 10px;
-            font-weight: 500;
             padding: 30.8px 0px;
-            transition: background-color $duration ease;
-            cursor: pointer;
 
             &:hover {
                 background-color: #3a71d4;
